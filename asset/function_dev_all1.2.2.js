@@ -231,10 +231,25 @@
 	        //FACEBOOK OFFICIAL
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
-
+	        window.YoutubeURLUrlSource = YoutubeURL
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
 
+	        //Youtube
+	        var element = document.getElementById('youtube_iframe');
+	        if (typeof(element) != 'undefined' && element != null) {
+	            // your code here
+	            console.log('Found advance iframe !');
+
+	            var loc = window.YoutubeURLUrlSource;
+	            document.getElementById('youtube_iframe').setAttribute('src', loc);
+
+	            console.log('advance iframe bind done!')
+
+	        } else {
+	            console.log('have a good day')
+	                // finish code test
+	        } //element exist check
 
 	        //SpinixDiamond
 	        var element = document.getElementById('advanced_iframe');
@@ -283,6 +298,17 @@
 	            }
 
 	            return _facebookofficialid;
+	        }
+
+	        function BuildYoutubeLink(_youtubeofficialid) {
+	            if (_youtubeofficialid == null) {
+	                //console.log('à¸à¸£à¸¸à¸“à¸²à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² youtube Official à¹ƒà¸™à¸£à¸°à¸šà¸š Central Management');
+	                _youtubeofficialid = '/';
+	            } else {
+	                _youtubeofficialid = _youtubeofficialid;
+	            }
+
+	            return _youtubeofficialid;
 	        }
 
 	        function BuildSpinixRegisterLink(_registerURL) {
