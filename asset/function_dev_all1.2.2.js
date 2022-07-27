@@ -220,7 +220,7 @@
 	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL);
 	        var SiteLINEOfficial = BuildLINEOfficialLink(_siteconfig.setting.line_id);
 	        var SiteFACEBOOKOfficial = BuildFACEBOOKOfficialLink(_siteconfig.setting.facebookURL);
-	        var YoutubeURL = BuildYoutubeLink(ServerURL);
+	        var YoutubeURL = BuildYoutubeLink(_siteconfig.setting.youtubeURL);
 
 	        //var SetLoginElementLink = window.btnLoginIds;
 	        var SetRegisElementLink = window.registerIds;
