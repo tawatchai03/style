@@ -217,9 +217,10 @@
 	        var SiteRegisterReferral = localStorage.getItem('referral');
 	        var currentkey = BuildKey();
 	        var SpinixDiamondURL = BuildSpinixDiamondLink(ServerURL);
-	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL)
+	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL);
 	        var SiteLINEOfficial = BuildLINEOfficialLink(_siteconfig.setting.line_id);
 	        var SiteFACEBOOKOfficial = BuildFACEBOOKOfficialLink(_siteconfig.setting.facebookURL);
+	        var YoutubeURL = BuildYoutubeLink(ServerURL);
 
 	        //var SetLoginElementLink = window.btnLoginIds;
 	        var SetRegisElementLink = window.registerIds;
@@ -231,7 +232,7 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //Youtube
-	        window.YoutubeUrlSource = youtubeURL
+	        window.YoutubeUrlSource = YoutubeURL
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
 
@@ -250,7 +251,6 @@
 	            console.log('have a good day')
 	                // finish code test
 	        } //element exist check
-
 
 	        //SpinixDiamond
 	        var element = document.getElementById('advanced_iframe');
