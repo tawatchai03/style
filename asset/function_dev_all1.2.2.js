@@ -276,7 +276,7 @@
 	                //console.log('à¸à¸£à¸¸à¸“à¸²à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² facebook Official à¹ƒà¸™à¸£à¸°à¸šà¸š Central Management');
 	                _facebookofficialid = '/';
 	            } else {
-	                _facebookofficialid = _facebookofficialid;
+	                _facebookofficialid = 'https://www.facebook.com/' + _facebookofficialid;
 	            }
 
 	            return _facebookofficialid;
