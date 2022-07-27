@@ -230,10 +230,29 @@
 	        //FACEBOOK OFFICIAL
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
-
+	        //Youtube
+	        window.YoutubeUrlSource = youtubeURL
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
 
+	        //Youtube
+	        var element = document.getElementById('youtube_iframe');
+	        if (typeof(element) != 'undefined' && element != null) {
+	            // your code here
+	            console.log('Found advance iframe !');
+
+	            var loc = window.YoutubeUrlSource;
+	            document.getElementById('youtube_iframe').setAttribute('src', loc);
+
+	            console.log('advance iframe bind done!')
+
+	        } else {
+	            console.log('have a good day')
+	                // finish code test
+	        } //element exist check
+
+
+	        //SpinixDiamond
 	        var element = document.getElementById('advanced_iframe');
 	        if (typeof(element) != 'undefined' && element != null) {
 	            // your code here
