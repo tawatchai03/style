@@ -231,6 +231,9 @@
 	        //FACEBOOK OFFICIAL
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
+	        //Youtube OFFICIAL
+	        var SetYoutubeOfficialLink = window.youtubeofficial;
+
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
@@ -447,7 +450,7 @@
 	        console.log('Referal_id (optional) : ' + SiteRegisterReferral);
 	        console.log('LINE Official  : ' + SiteLINEOfficial);
 	        console.log('FACEBOOK Official  : ' + SiteFACEBOOKOfficial);
-
+	        console.log('Youtube Official  : ' + SetYoutubeOfficialLink);
 
 
 	    }); //siteconfig response ends
