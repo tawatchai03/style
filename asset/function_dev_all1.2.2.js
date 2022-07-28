@@ -231,6 +231,8 @@
 	        //FACEBOOK OFFICIAL
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
+	        //YOUTUBE OFFICIAL
+	        var SetYOUTUBEOfficialLink = window.youtubeofficial;
 
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
@@ -439,7 +441,21 @@
 	            }
 	        }
 
-
+	        //youtubeofficial
+	        for (j = 0; j < SetYOUTUBEOfficialLink.length; j++) {
+	            //Check Element Exist first
+	            var element = document.getElementById(SetYOUTUBEOfficialLink[j]);
+	            if (typeof(element) != 'undefined' && element != null) {
+	                // Exists.
+	                document.getElementById(SetYOUTUBEOfficialLink[j]).addEventListener("click", function() {
+	                    window.location.assign(YoutubeURL);
+	                });
+	                console.log("El: #" + SetYOUTUBEOfficialLink[j] + " Binding done.");
+	            } else {
+	                //Not Exist
+	                console.log('ERROR: #' + SetYOUTUBEOfficialLink[j] + ' EL NOT EXIST.');
+	            }
+	        }
 
 
 
@@ -461,3 +477,4 @@
 
 	}, false);
 	/**--------------------------------------------------------------------- */
+	SetYOUTUBEOfficialLink
