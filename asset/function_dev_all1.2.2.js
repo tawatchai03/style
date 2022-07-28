@@ -454,7 +454,7 @@
 	        //    after the API code downloads.
 	        var player;
 
-	        function onYouTubeIframeAPIReady() {
+	        function BuildYoutubeLink() {
 	            player = new YT.Player('player', {
 	                height: '100%',
 	                width: '100%',
