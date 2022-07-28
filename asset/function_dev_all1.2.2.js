@@ -458,7 +458,7 @@
 	            player = new YT.Player('player', {
 	                height: '100%',
 	                width: '100%',
-	                videoId: _youtubeofficialid,
+	                videoId: YoutubeURL,
 	                playerVars: {
 	                    'playsinline': 1
 	                },
