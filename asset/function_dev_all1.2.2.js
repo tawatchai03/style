@@ -451,44 +451,20 @@
 
 	/*function Youtube Official*/
 
-	var tag = document.createElement('script');
-	tag.src = "https://www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	function getId(url) {
+	    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+	    const match = url.match(regExp);
 
-	var player;
-
-	function onYouTubeIframeAPIReady() {
-	    player = new YT.Player('player', {
-	        height: '100%',
-	        width: '100%',
-	        videoId: 'aPUVUrS2oC0',
-	        playerVars: {
-	            'playsinline': 1
-	        },
-	        events: {
-	            'onReady': onPlayerReady,
-	            'onStateChange': onPlayerStateChange
-	        }
-	    });
+	    return (match && match[2].length === 11) ?
+	        match[2] :
+	        null;
 	}
 
-	function onPlayerReady(event) {
-	    event.target.playVideo();
-	}
+	const videoId = getId('http://www.youtube.com/watch?v=zbYf5_S7oJo');
+	const iframeMarkup = '<iframe width="560" height="315" src="//www.youtube.com/embed/' +
+	    videoId + '" frameborder="0" allowfullscreen></iframe>';
 
-	var done = false;
-
-	function onPlayerStateChange(event) {
-	    if (event.data == YT.PlayerState.PLAYING && !done) {
-	        setTimeout(stopVideo, 6000);
-	        done = true;
-	    }
-	}
-
-	function stopVideo() {
-	    player.stopVideo();
-	}
-	/*End function Youtube Official*/
+	console.log('Video ID:', videoId)
+	    /*End function Youtube Official*/
 
 	/**---------------------------------------------------------------------*/
