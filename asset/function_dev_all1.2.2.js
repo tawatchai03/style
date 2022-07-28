@@ -220,7 +220,7 @@
 	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL);
 	        var SiteLINEOfficial = BuildLINEOfficialLink(_siteconfig.setting.line_id);
 	        var SiteFACEBOOKOfficial = BuildFACEBOOKOfficialLink(_siteconfig.setting.facebookURL);
-	        var YoutubeURL = BuildYoutubeLink(_siteconfig.setting.youtubeURL);
+	        var YoutubeURL = youTubeVideoIdFromUrl(_siteconfig.setting.youtubeURL);
 
 	        //var SetLoginElementLink = window.btnLoginIds;
 	        var SetRegisElementLink = window.registerIds;
@@ -232,7 +232,7 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //YOUTUBE OFFICIAL
-	        var SetYOUTUBEOfficialLink = window.youtubeofficial;
+
 
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
@@ -285,17 +285,6 @@
 	            }
 
 	            return _facebookofficialid;
-	        }
-
-	        function BuildYoutubeLink(_youtubeofficialid) {
-	            if (_youtubeofficialid == null) {
-	                //console.log('à¸à¸£à¸¸à¸“à¸²à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² youtube Official à¹ƒà¸™à¸£à¸°à¸šà¸š Central Management');
-	                _youtubeofficialid = '/';
-	            } else {
-	                _youtubeofficialid = _youtubeofficialid;
-	            }
-
-	            return _youtubeofficialid;
 	        }
 
 	        function BuildSpinixRegisterLink(_registerURL) {
@@ -440,46 +429,21 @@
 	                console.log('ERROR: #' + SetFACEBOOKOfficialLink[j] + ' EL NOT EXIST.');
 	            }
 	        }
-
 	        /*function Youtube Official*/
-	        var tag = document.createElement('script');
-
-	        tag.src = "https://www.youtube.com/iframe_api";
-	        var firstScriptTag = document.getElementsByTagName('script')[0];
-	        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	        var player;
-
-	        function onYouTubeIframeAPIReady() {
-	            player = new YT.Player('player', {
-	                height: '100%',
-	                width: '100%',
-	                videoId: 'DsaYwKiLRoI',
-	                playerVars: {
-	                    'playsinline': 1
-	                },
-	                events: {
-	                    'onReady': onPlayerReady,
-	                    'onStateChange': onPlayerStateChange
+	        function validateYouTubeUrl() {
+	            var url = $('#youTubeUrl').val();
+	            if (url != undefined || url != '') {
+	                var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
+	                var match = url.match(regExp);
+	                if (match && match[2].length == 11) {
+	                    // Do anything for being valid
+	                    // if need to change the url to embed url then use below line            
+	                    $('#videoObject').attr('src', 'https://www.youtube.com/embed/' + match[2] + '?autoplay=1&enablejsapi=1');
+	                } else {
+	                    alert('not valid');
+	                    // Do anything for not being valid
 	                }
-	            });
-	        }
-
-	        function onPlayerReady(event) {
-	            event.target.playVideo();
-	        }
-
-	        var done = false;
-
-	        function onPlayerStateChange(event) {
-	            if (event.data == YT.PlayerState.PLAYING && !done) {
-	                setTimeout(stopVideo, 6000);
-	                done = true;
 	            }
-	        }
-
-	        function stopVideo() {
-	            player.stopVideo();
 	        }
 	        /*End function Youtube Official*/
 
@@ -490,7 +454,7 @@
 	        console.log('Referal_id (optional) : ' + SiteRegisterReferral);
 	        console.log('LINE Official  : ' + SiteLINEOfficial);
 	        console.log('FACEBOOK Official  : ' + SiteFACEBOOKOfficial);
-	        console.log('Youtube Official  : ' + YoutubeURL);
+	        //console.log('Youtube Official  : ' + YoutubeURL);
 
 
 	    }); //siteconfig response ends
