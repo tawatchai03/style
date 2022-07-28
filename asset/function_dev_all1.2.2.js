@@ -286,18 +286,18 @@
 
 	            return _facebookofficialid;
 	        }
+	        /*
+	        	        function BuildYoutubeLink(_youtubeofficialid) {
+	        	            if (_youtubeofficialid == null) {
+	        	                //console.log('à¸à¸£à¸¸à¸“à¸²à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² youtube Official à¹ƒà¸™à¸£à¸°à¸šà¸š Central Management');
+	        	                _youtubeofficialid = '/';
+	        	            } else {
+	        	                _youtubeofficialid = _youtubeofficialid;
+	        	            }
 
-	        function BuildYoutubeLink(_youtubeofficialid) {
-	            if (_youtubeofficialid == null) {
-	                //console.log('à¸à¸£à¸¸à¸“à¸²à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² youtube Official à¹ƒà¸™à¸£à¸°à¸šà¸š Central Management');
-	                _youtubeofficialid = '/';
-	            } else {
-	                _youtubeofficialid = _youtubeofficialid;
-	            }
-
-	            return _youtubeofficialid;
-	        }
-
+	        	            return _youtubeofficialid;
+	        	        }
+			*/
 	        function BuildSpinixRegisterLink(_registerURL) {
 	            //TODO
 	            //step 1 : standard url
@@ -442,53 +442,14 @@
 	        }
 
 	        /*function Youtube Official*/
+	        function BuildYoutubeLink($url) {
 
-	        // 1. This code loads the IFrame Player API code asynchronously.
-	        var tag = document.createElement('script');
+	            $urlParts = explode('/', $url);
+	            $vidid = explode('&', str_replace('watch?v=', '', end($urlParts)));
 
-	        tag.src = "https://www.youtube.com/iframe_api";
-	        var firstScriptTag = document.getElementsByTagName('script')[0];
-	        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	        // 2. This function creates an <iframe> (and YouTube player)
-	        //    after the API code downloads.
-	        var player;
-
-	        function BuildYoutubeLink() {
-	            player = new YT.Player('player', {
-	                height: '100%',
-	                width: '100%',
-	                videoId: YoutubeURL,
-	                playerVars: {
-	                    'playsinline': 1
-	                },
-	                events: {
-	                    'onReady': onPlayerReady,
-	                    'onStateChange': onPlayerStateChange
-	                }
-	            });
+	            return 'https://www.youtube.com/embed/'.$vidid[0];
 	        }
 
-	        // 3. The API will call this function when the video player is ready.
-	        function onPlayerReady(event) {
-	            event.target.playVideo();
-	        }
-
-	        // 4. The API calls this function when the player's state changes.
-	        //    The function indicates that when playing a video (state=1),
-	        //    the player should play for six seconds and then stop.
-	        var done = false;
-
-	        function onPlayerStateChange(event) {
-	            if (event.data == YT.PlayerState.PLAYING && !done) {
-	                setTimeout(stopVideo, 6000);
-	                done = true;
-	            }
-	        }
-
-	        function stopVideo() {
-	            player.stopVideo();
-	        }
 	        /*End function Youtube Official*/
 
 	        //console.log( 'Register url : ' +SpinixRegisterURL );
@@ -508,4 +469,4 @@
 
 
 	}, false);
-	/**--------------------------------------------------------------------- */
+	/**---------------------------------------------------------------------*/
