@@ -231,7 +231,7 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //YOUTUBE OFFICIAL
-	        document.getElementsById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v="' + YoutubeURL + 'frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
+	        document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v="' + YoutubeURL + 'frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
 
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
