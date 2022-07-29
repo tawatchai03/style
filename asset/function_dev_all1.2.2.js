@@ -220,7 +220,7 @@
 	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL);
 	        var SiteLINEOfficial = BuildLINEOfficialLink(_siteconfig.setting.line_id);
 	        var SiteFACEBOOKOfficial = BuildFACEBOOKOfficialLink(_siteconfig.setting.facebookURL);
-	        //var YoutubeURL = youTubeVideoIdFromUrl(_siteconfig.setting.youtubeURL);
+	        var YoutubeURL = SetYOUTUBEOfficialLink(_siteconfig.setting.youtubeURL);
 
 	        //var SetLoginElementLink = window.btnLoginIds;
 	        var SetRegisElementLink = window.registerIds;
@@ -285,6 +285,19 @@
 	            }
 
 	            return _facebookofficialid;
+	        }
+	        //YOUTUBE OFFICIAL
+	        var SetYOUTUBEOfficialLink = window.youtubeofficial;
+
+	        function BuildYoutubeLink(_youtubeofficialid) {
+	            if (_youtubeofficialid == null) {
+	                //console.log('à¸à¸£à¸¸à¸“à¸²à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸² youtube Official à¹ƒà¸™à¸£à¸°à¸šà¸š Central Management');
+	                _youtubeofficialid = '/';
+	            } else {
+	                _youtubeofficialid = _youtubeofficialid;
+	            }
+
+	            return _youtubeofficialid;
 	        }
 
 	        function BuildSpinixRegisterLink(_registerURL) {
@@ -438,7 +451,7 @@
 	        console.log('Referal_id (optional) : ' + SiteRegisterReferral);
 	        console.log('LINE Official  : ' + SiteLINEOfficial);
 	        console.log('FACEBOOK Official  : ' + SiteFACEBOOKOfficial);
-	        //console.log('Youtube Official  : ' + YoutubeURL);
+	        console.log('Youtube Official  : ' + YoutubeURL);
 
 
 	    }); //siteconfig response ends
