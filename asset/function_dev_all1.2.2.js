@@ -220,14 +220,13 @@
 	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL);
 	        var SiteLINEOfficial = BuildLINEOfficialLink(_siteconfig.setting.line_id);
 	        var SiteFACEBOOKOfficial = BuildFACEBOOKOfficialLink(_siteconfig.setting.facebookURL);
-	        var YoutubeURL = SetYOUTUBEOfficialLink(_siteconfig.setting.youtubeURL);
+	        var YoutubeURL = BuildYoutubeLink(_siteconfig.setting.youtubeURL);
 
 	        //var SetLoginElementLink = window.btnLoginIds;
 	        var SetRegisElementLink = window.registerIds;
 
 	        //LINE OFFICIAL
 	        var SetLINEOfficialLink = window.lineofficial;
-
 	        //FACEBOOK OFFICIAL
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
@@ -286,8 +285,7 @@
 
 	            return _facebookofficialid;
 	        }
-	        //YOUTUBE OFFICIAL
-	        var SetYOUTUBEOfficialLink = window.youtubeofficial;
+
 
 	        function BuildYoutubeLink(_youtubeofficialid) {
 	            if (_youtubeofficialid == null) {
