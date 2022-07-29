@@ -230,8 +230,9 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //YOUTUBE OFFICIAL
-	        document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
-
+	        if (YoutubeURL) {
+	            document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
+	        }
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
