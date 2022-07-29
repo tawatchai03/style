@@ -221,8 +221,6 @@
 	        var SiteLINEOfficial = BuildLINEOfficialLink(_siteconfig.setting.line_id);
 	        var SiteFACEBOOKOfficial = BuildFACEBOOKOfficialLink(_siteconfig.setting.facebookURL);
 	        var YoutubeURL = BuildYoutubeLink(_siteconfig.setting.youtubeURL);
-	        const youtubeid = YoutubeURL.slice(1);
-	        console.log('youtubeURL=', _siteconfig.setting.youtubeURL);
 	        //var SetLoginElementLink = window.btnLoginIds;
 	        var SetRegisElementLink = window.registerIds;
 
@@ -232,7 +230,7 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //YOUTUBE OFFICIAL
-	        document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=' + youtubeid + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
+	        document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
 
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
