@@ -231,7 +231,7 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //YOUTUBE OFFICIAL
-
+	        document.getElementsById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v="' + YoutubeURL + 'frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
 
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
@@ -460,22 +460,7 @@
 
 	}, false);
 
-	/*function Youtube Official*/
 
-	function getId(url) {
-	    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-	    const match = url.match(regExp);
-
-	    return (match && match[2].length === 11) ?
-	        match[2] :
-	        null;
-	}
-
-	const videoId = getId('http://www.youtube.com/watch?v=zbYf5_S7oJo');
-	const iframeMarkup = '<iframe width="560" height="315" src="//www.youtube.com/embed/' +
-	    videoId + '" frameborder="0" allowfullscreen></iframe>';
-
-	console.log('Video ID:', videoId)
-	    /*End function Youtube Official*/
 
 	/**---------------------------------------------------------------------*/
+	/*function Youtube Official*/
