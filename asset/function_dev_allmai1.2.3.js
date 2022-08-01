@@ -230,43 +230,23 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //YOUTUBE OFFICIAL
-	        /* if (YoutubeURL) {
-				// var element = document.getElementById('player');
-				
-					// your code here
-				 	const para = document.createElement("iframe");
-					// document.getElementById('player').setAttribute('src', YoutubeURL);
-				para.setAttribute('src', url);
-				para.setAttribute('class', "embed-responsive-item");
-	            
+	        if (YoutubeURL) {
+	            // var element = document.getElementById('player');
+
+	            // your code here
+	            //const para = document.createElement("iframe");
+	            // document.getElementById('player').setAttribute('src', YoutubeURL);
+	            //para.setAttribute('src', url);
+	            //para.setAttribute('class', "embed-responsive-item");
+
 
 	            // document.getElementById("player").appendChild(para);
 
-	            // document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
+	            document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
 	        } else {
 	            document.getElementById("vdoplay").style.display = "none";
-	        }*/
-
-	        // Find all the YouTube video embedded on a page
-	        var videos = document.getElementsByClassName("youtube");
-
-	        for (var i = 0; i < videos.length; i++) {
-
-	            var youtube = videos[i];
-
-	            // Overlay the Play icon to make it look like a video player
-	            var circle = document.createElement("div");
-	            circle.setAttribute("class", "circle");
-
-	            youtube.appendChild(circle);
-
-	            // Create an iFrame with autoplay set to true
-	            var iframe = document.createElement("iframe");
-	            iframe.setAttribute("src",
-	                "https://www.youtube.com/embed/" + YoutubeURL +
-	                "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1");
-
 	        }
+
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
