@@ -3,7 +3,7 @@
 	window.cmBaseApiUrl = 'https://api-gw-py-prod.lavagaming.com'
 	window.spinixBaseApiUrl = 'https://backend.spinix.com'
 	window.spinixLobbyUrl = 'https://www.spinix.com'
-	console.log('platform function v.1.2.4 build 07-03-2022')
+	console.log('platform function v.1.2.4 build 01/08/2022')
 
 	let ReconnectCount = 1;
 
@@ -217,7 +217,7 @@
 	        var SiteRegisterReferral = localStorage.getItem('referral');
 	        var currentkey = BuildKey();
 	        var SpinixDiamondURL = BuildSpinixDiamondLink(ServerURL);
-	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL);
+	        var SpinixRegisterURL = BuildSpinixRegisterLink(ServerURL)
 	        var SiteLINEOfficial = BuildLINEOfficialLink(_siteconfig.setting.line_id);
 	        var SiteFACEBOOKOfficial = BuildFACEBOOKOfficialLink(_siteconfig.setting.facebookURL);
 	        var YoutubeURL = BuildYoutubeLink(_siteconfig.setting.youtubeURL);
@@ -461,7 +461,5 @@
 
 
 	}, false);
-
-
 
 	/**---------------------------------------------------------------------*/
