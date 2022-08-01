@@ -3,7 +3,7 @@
 	window.cmBaseApiUrl = 'https://api-gw-py-prod.lavagaming.com'
 	window.spinixBaseApiUrl = 'https://backend.spinix.com'
 	window.spinixLobbyUrl = 'https://www.spinix.com'
-	console.log('platform function v.1.2.4 build 07-03-2022')
+	console.log('platform function v.1.2.5 build 02-08-2022')
 
 	let ReconnectCount = 1;
 
