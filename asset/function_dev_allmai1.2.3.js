@@ -230,20 +230,22 @@
 	        var SetFACEBOOKOfficialLink = window.facebookofficial;
 
 	        //YOUTUBE OFFICIAL
-	        if (YoutubeURL) {
-	            // Create element:
-	            const para = document.createElement("iframe");
-	            let url = "https://www.youtube.com/embed/" + YoutubeURL;
-	            para.setAttribute('src', url);
-	            para.setAttribute('class', "embed-responsive-item");
+	        /* if (YoutubeURL) {
+				// var element = document.getElementById('player');
+				
+					// your code here
+				 	const para = document.createElement("iframe");
+					// document.getElementById('player').setAttribute('src', YoutubeURL);
+				para.setAttribute('src', url);
+				para.setAttribute('class', "embed-responsive-item");
+	            
 
-	            // Append to another element:
-	            document.getElementById("player").appendChild(para);
+	            // document.getElementById("player").appendChild(para);
 
 	            // document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
 	        } else {
 	            document.getElementById("vdoplay").style.display = "none";
-	        }
+	        }*/
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
