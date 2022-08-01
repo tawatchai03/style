@@ -266,10 +266,6 @@
 	                "https://www.youtube.com/embed/" + YoutubeURL +
 	                "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1");
 
-
-	            // Replace the YouTube thumbnail with YouTube HTML5 Player
-	            this.parentNode.replaceChild(iframe, this);
-
 	        }
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
