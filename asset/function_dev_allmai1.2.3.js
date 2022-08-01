@@ -231,7 +231,14 @@
 
 	        //YOUTUBE OFFICIAL
 	        if (YoutubeURL) {
-	            document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
+	            // Create element:
+	            const para = document.createElement("p");
+	            para.innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
+
+	            // Append to another element:
+	            document.getElementById("player").appendChild(para);
+
+	            // document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
 	        } else {
 	            document.getElementById("vdoplay").style.display = "none";
 	        }
