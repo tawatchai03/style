@@ -3,7 +3,7 @@
 	window.cmBaseApiUrl = 'https://api-gw-py-prod.lavagaming.com'
 	window.spinixBaseApiUrl = 'https://backend.spinix.com'
 	window.spinixLobbyUrl = 'https://www.spinix.com'
-	console.log('platform function v.1.2.4 build 01/08/2022')
+	console.log('platform function v.1.2.4 build 07-03-2022')
 
 	let ReconnectCount = 1;
 
@@ -231,22 +231,10 @@
 
 	        //YOUTUBE OFFICIAL
 	        if (YoutubeURL) {
-	            // var element = document.getElementById('player');
-
-	            // your code here
-	            //const para = document.createElement("iframe");
-	            // document.getElementById('player').setAttribute('src', YoutubeURL);
-	            //para.setAttribute('src', url);
-	            //para.setAttribute('class', "embed-responsive-item");
-
-
-	            // document.getElementById("player").appendChild(para);
-
 	            document.getElementById('player').innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + YoutubeURL + '" frameborder = "0"	allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"	allowfullscreen > < /iframe>';
 	        } else {
 	            document.getElementById("vdoplay").style.display = "none";
 	        }
-
 
 	        window.spinixIFrameUrlSource = SpinixDiamondURL
 	        window.spinixRegisterURLSource = SpinixRegisterURL
@@ -474,4 +462,4 @@
 
 	}, false);
 
-	/**---------------------------------------------------------------------*/
+	/*---------------------------------------------------------------------------------------------*/
