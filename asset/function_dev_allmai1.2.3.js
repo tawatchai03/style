@@ -254,18 +254,10 @@
 
 	            var youtube = videos[i];
 
-	            // Based on the YouTube ID, we can easily find the thumbnail image
-	            var img = document.createElement("img");
-	            img.setAttribute("src", "http://i.ytimg.com/vi/" +
-	                youtube.id + "/hqdefault.jpg");
-	            img.setAttribute("class", "thumb");
-
-
 	            // Overlay the Play icon to make it look like a video player
 	            var circle = document.createElement("div");
 	            circle.setAttribute("class", "circle");
 
-	            youtube.appendChild(img);
 	            youtube.appendChild(circle);
 
 	            // Attach an onclick event to the YouTube Thumbnail
